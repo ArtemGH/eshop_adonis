@@ -1,0 +1,182 @@
+.reg_modal_window{
+    position: absolute;
+    width: 300px;
+    height: 320px;
+    top: calc(50vh - 160px);
+    left: calc(50vw - 150px);
+    z-index: 103;
+    background-color: white;
+}
+
+.reg_form{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    height: 280px;
+    width: 300px;
+    text-align: left;
+    justify-content: left;
+}
+
+.reg_login{
+    position: relative;
+    top: 0;
+    left: 5px;
+    height: 20px;
+    width: 240px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+    border: 0;
+    padding: 0;
+    background: lightgrey;
+}
+
+.reg_password{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    height: 20px;
+    width: 240px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+    border: 0;
+    padding: 0;
+    background: lightgrey;
+
+}
+
+.reg_confirm_password{
+    position: relative;
+    top: 10px;
+    left: 5px;
+    height: 20px;
+    width: 240px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+    border: 0;
+    padding: 0;
+    background: lightgrey;
+
+}
+
+.reg_name{
+    position: relative;
+    top: 15px;
+    left: 5px;
+    height: 20px;
+    width: 240px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+    border: 0;
+    padding: 0;
+    background: lightgrey;
+
+}
+
+.reg_fam{
+    position: relative;
+    top: 20px;
+    left: 5px;
+    height: 20px;
+    width: 240px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+    border: 0;
+    padding: 0;
+    background: lightgrey;
+
+}
+
+.reg_tel{
+    position: relative;
+    top: 25px;
+    left: 5px;
+    height: 20px;
+    width: 240px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+    border: 0;
+    padding: 0;
+    background: lightgrey;
+
+}
+
+.reg_email{
+    position: relative;
+    top: 30px;
+    left: 5px;
+    height: 20px;
+    width: 240px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+    border: 0;
+    padding: 0;
+    background: lightgrey;
+
+}
+
+.reg_login_img{
+    position: relative;
+    top: 7px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.reg_password_img{
+    position: relative;
+    top: 12px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.reg_confirm_password_img{
+    position: relative;
+    top: 17px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.reg_name_img{
+    position: relative;
+    top: 22px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.reg_fam_img{
+    position: relative;
+    top: 27px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.reg_tel_img{
+    position: relative;
+    top: 32px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.reg_email_img{
+    position: relative;
+    top: 37px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.reg_button{
+    position: relative;
+    left: 5px;
+    top: 42px;
+    height: 26px;
+    width: 240px;
+    font-size: 16px;
+    font-family: 'Cormorant Infant' ;
+}

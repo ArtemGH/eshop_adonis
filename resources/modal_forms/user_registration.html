@@ -1,0 +1,22 @@
+<div class="modal_background" id="modal_background" onclick="HideRegisterWindow()"></div>
+<div class="reg_modal_window">
+  <span class="window_close" onclick="HideRegisterWindow()">Закрыть X</span>
+  <h2 style="margin: 0;  border: 0;  padding: 0;  text-align: center; ">Регистрация</h2>
+  <form class="reg_form">
+    <input type="text" class="reg_login" id="reg_login" placeholder="login" autocomplete="off" value="" oninput="CheckRegField(1)" onchange="CheckRegField(1)">
+    <img class="reg_login_img" id="reg_login_img" src="../decor/no.jpg">
+    <input type="password" class="reg_password" id="reg_password" placeholder="password" autocomplete="off" value="" oninput="CheckRegField(2)">
+    <img class="reg_password_img" id="reg_password_img" src="../decor/no.jpg">
+    <input type="password" class="reg_confirm_password" id="reg_confirm_password" placeholder="confirm password" autocomplete="off" value="" oninput="CheckRegField(3)">
+    <img class="reg_confirm_password_img" id="reg_confirm_password_img" src="../decor/no.jpg">
+    <input type="text" class="reg_name" id="reg_name" placeholder="имя" autocomplete="off" value="" oninput="CheckRegField(4)">
+    <img class="reg_name_img" id="reg_name_img" src="../decor/no.jpg">
+    <input type="text" class="reg_fam" id="reg_fam" placeholder="фамилия" autocomplete="off" value="" oninput="CheckRegField(5)">
+    <img class="reg_fam_img" id="reg_fam_img" src="../decor/no.jpg">
+    <input type="tel" class="reg_tel" id="reg_tel" placeholder="телефон" autocomplete="off" value="" oninput="CheckRegField(6)">
+    <img class="reg_tel_img" id="reg_tel_img" src="../decor/no.jpg">
+    <input type="email" class="reg_email" id="reg_email" placeholder="eMail" autocomplete="off" value="" oninput="CheckRegField(7)">
+    <img class="reg_email_img" id="reg_email_img" src="../decor/no.jpg">
+    <input type="button" class="reg_button" id="reg_button" value="Зарегестрироваться" onclick="RegisterUser()">
+  </form>
+</div>

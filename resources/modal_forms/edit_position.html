@@ -1,0 +1,21 @@
+<div class="modal_background_edit_pos" id="modal_background_edit_pos" onclick="HideEditPosWindow()"> </div>
+<div class="edit_pos_modal_window" >
+  <span class="window_close" onclick="HideEditPosWindow()">Закрыть X</span>
+
+  <h2 id="edit_pos_form_header">Добавить позицию</h2>
+
+  <div class="edit_pos_left_side" id="edit_pos_left_side">
+    <input type="text" class="edit_pos_name" id="edit_pos_name" placeholder="Название" value="">
+    <input type="number" class="edit_pos_price" id="edit_pos_price" step="1" placeholder="Цена" value="0">
+
+    <div class="edit_pos_img_cnt" id="edit_pos_img_cnt">
+      <div style="background-color: white" class="edit_pos_img" id="edit_pos_img"></div>
+      <input type="file" class="edit_pos_img_file" id="edit_pos_img_file" accept="">
+    </div>
+
+    <input type="button" class="edit_pos_button" id="edit_pos_button" value="Сохранить">
+  </div>
+  <div class="edit_pos_right_side">
+    <textarea class="tiny_text" id="tiny_text"> </textarea>
+  </div>
+</div>

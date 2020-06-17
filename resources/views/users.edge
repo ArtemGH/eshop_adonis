@@ -1,0 +1,130 @@
+@layout('master')
+
+@section('styles')
+<link rel="stylesheet" href="../css/master.css">
+<link rel="stylesheet" href="../css/content.css">
+@if(user_id == 0)
+<link rel="stylesheet" href="../css/register_window.css">
+@endif
+@endsection
+
+@section('scripts')
+@endsection
+
+@section('privat_info')
+@if(user.id > 0)
+<div class=flex_element_div> <a class=admin_href>{{user.user_login}}</a></div>
+<div class=flex_element_div> <a class=admin_href href=javascript:logOut();>Выйти</a></div>
+@each(can_do in user_can_do)
+@if(can_do == 'prise')
+<div class=flex_element_div><a class=admin_href href=/content?page=1&cat_id=0&ContentType=Categories&filter=>Контент</a></div>
+@endif
+@if(can_do == 'order')
+<div class=flex_element_div><a class=admin_href href=/orders?page=1&filter=>Заказы</a></div>
+@endif
+@if(can_do == 'user')
+<div class=flex_element_div><a class=admin_href href=/users?page=1&filter=>Пользователи</a></div>
+@endif
+@endeach
+@else
+<input class=login_input id=login_input name=login_input type=text placeholder=login>
+<b>   </b>
+<input class=\pass_input id=pass_input name=pass_input type=password placeholder=password>
+<b>   </b>
+<input class=login_button type=button value=Login onclick=Login()>
+<b>   </b>
+<a class=admin_href href=javascript:ShowRegisterWindow()>Регистрация</a>
+@endif
+@endsection
+
+@section('content')
+<div class="pages">Страница:
+  @if(page_n > 1)
+  <a class=page href=/users?page=1&filter={{filter}} title=Первая> << </a>
+  <a class=page href=/users?page={{(page_n-1)}}&filter={{filter}} title=Предыдущая> < </a>
+  @endif
+  @each(page in pages_nav)
+  @if(page_n==page)
+  <a class=page_activ href=/users?page={{page}}&filter={{filter}} title={{page}}> {{page}} </a>
+  @else
+  <a class=page href=/users?page={{page}}&filter={{filter}} title={{page}}> {{page}} </a>
+  @endif
+  @endeach
+  @if(page_n < page_count)
+  <a class=page href=/users?page={{(page_n+1)}}&filter={{filter}} title=Следующая> > </a>
+  <a class=page href=/users?page={{page_count}}&filter={{filter}} title=Последняя> >> </a>
+  @endif
+  </div>
+
+  <div class="content_grid_sub_tab" id="content_grid_sub" >
+    <div class="content_grid_item_1_users">
+      <h3>User</h3>
+    </div>
+    <div class="content_grid_item_2_users" >
+      <h3>Права</h3>
+    </div>
+    <div class="content_grid_item_3_users" >
+      <h3></h3>
+    </div>
+  </div>
+
+@each(i in data)
+  <div class="content_grid_sub_tab">
+    <div class="content_grid_item_1_users">
+      <a class="content_grid_item_1_users_link" align="right"> {{i.user_login}} </a>
+    </div>
+
+    <div class="content_grid_item_2_users">
+
+      @if(i.user_can_do.indexOf('user')!=-1)
+      <input type="checkbox" id="user_{{i.id}}" checked class="content_grid_item_1_users_link" onclick="SetUserPr1({{i.id}},'user')"> Права пользователей </input>
+      @else
+      <input type="checkbox" id="user_{{i.id}}" class="content_grid_item_1_users_link" onclick="SetUserPr1({{i.id}},'user')"> Права пользователей </input>
+      @endif
+      <br>
+      @if(i.user_can_do.indexOf('order')!=-1)
+      <input type="checkbox" id="order_{{i.id}}" checked class="content_grid_item_1_users_link" onclick="SetUserPr1({{i.id}},'order')">Обработка заказов</input>
+      @else
+      <input type="checkbox" id="order_{{i.id}}" class="content_grid_item_1_users_link" onclick=SetUserPr1({{i.id}},"order")>Обработка заказов</input>
+      @endif
+      <br>
+      @if(i.user_can_do.indexOf('prise')!=-1)
+      <input type="checkbox" id="prise_{{i.id}}" checked class="content_grid_item_1_users_link" onclick="SetUserPr1({{i.id}},'prise')">Наполнение контента</input>
+      @else
+      <input type="checkbox" id="prise_{{i.id}}" class="content_grid_item_1_users_link" onclick="SetUserPr1({{i.id}},'prise')">Наполнение контента</input>
+      @endif
+    </div>
+
+    <div class="content_grid_item_3_users" >
+      <input class="DeleteContentButton" type="button" value="Удалить" onclick="DelUser({{i.id}},{{page_n}},'{{filter}}','{{i.user_login}}')">
+    </div>
+  </div>
+
+@endeach
+
+<div class="pages">Страница:
+  @if(page_n > 1)
+  <a class=page href=/users?page=1&filter={{filter}} title=Первая> << </a>
+  <a class=page href=/users?page={{(page_n-1)}}&filter={{filter}} title=Предыдущая> < </a>
+  @endif
+  @each(page in pages_nav)
+  @if(page_n==page)
+  <a class=page_activ href=/users?page={{page}}&filter={{filter}} title={{page}}> {{page}} </a>
+  @else
+  <a class=page href=/users?page={{page}}&filter={{filter}} title={{page}}> {{page}} </a>
+  @endif
+  @endeach
+  @if(page_n < page_count)
+  <a class=page href=/users?page={{(page_n+1)}}&filter={{filter}} title=Следующая> > </a>
+  <a class=page href=/users?page={{page_count}}&filter={{filter}} title=Последняя> >> </a>
+  @endif
+</div>
+
+@endsection
+
+@section('modals')
+<div class="modal_container" id="modal_container"> </div>
+@endsection
+
+@section('script_after')
+@endsection

@@ -1,0 +1,336 @@
+.modal_container{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 101;
+}
+.modal_background{
+    background-color: rgba(0,0,0,0.5) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 102;
+}
+.modal_container_edit_pos{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
+.modal_background_edit_pos{
+    background-color: rgba(0,0,0,0.5) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 102;
+}
+
+.window_close {
+    float: right;
+    font-size: 1.5vw;
+    font-weight: normal;
+}
+.window_close:hover {
+    font-weight: bold;
+    cursor: default;
+}
+
+.edit_pos_modal_window {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+    z-index: 103;
+    background-color: white;
+}
+.edit_pos_left_side {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50vh;
+    height: calc(90vh - 60px);
+    z-index: 104;
+    background-color: white;
+}
+.edit_pos_right_side {
+    position: absolute;
+    top: 60px;
+    left: 50vh;
+    width: calc(90vw - 50vh);
+    height: calc(90vh - 60px);
+    z-index: 104;
+    background-color: white;
+    overflow:scroll;
+}
+.tiny_text{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+.edit_pos_name {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 26px;
+    font-size: 18px;
+    border: 0;
+    text-align: right;
+    background: lightgray;
+}
+.edit_pos_price {
+    position: relative;
+    top: 1px;
+    left: 0;
+    width: 100%;
+    height: 26px;
+    font-size: 18px;
+    border: 0;
+    text-align: right;
+    background: lightgray;
+}
+.edit_pos_img_cnt{
+    position: relative;
+    top: 1px;
+    left:0;
+    width: 50vh;
+    height: 50vh;
+}
+.edit_pos_img{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat     : no-repeat;
+    background-size       : contain;
+    background-position-x : 50%;
+    background-position-y : 50%;
+    background-color: white;
+}
+.edit_pos_img_file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.edit_pos_button {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+}
+
+.modal_container_edit_cat{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
+.modal_background_edit_cat{
+    background-color: rgba(0,0,0,0.5) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 102;
+}
+.edit_cat_modal_window {
+    position: absolute;
+    top: calc(50vh - 25vh - 71px);
+    left: calc(50vw - 25vh);
+    width: 50vh;
+    height: calc(50vh + 142px);
+    z-index: 103;
+    background-color: white;
+}
+.edit_cat_left_side {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50vh;
+    height: calc(50vh + 80px);
+    z-index: 104;
+    background-color: white;
+}
+.edit_cat_name {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 26px;
+    font-size: 18px;
+    border: 0;
+    text-align: center;
+    background: lightgray;
+}
+.edit_cat_img_cnt{
+    position: relative;
+    top: 1px;
+    left:0;
+    width: 50vh;
+    height: 50vh;
+}
+.edit_cat_img{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat     : no-repeat;
+    background-size       : cover;
+    background-position-x : 50%;
+    background-position-y : 50%;
+}
+.edit_cat_img_file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.edit_cat_button {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    font-family: 'Cormorant Infant' ;
+}
+
+.modal_container_edit_order{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
+.modal_background_edit_order{
+    background-color: rgba(0,0,0,0.5) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 102;
+}
+.edit_order_modal_window {
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    width: 90vw;
+    height: 90vh;
+    z-index: 103;
+    background-color: white;
+    text-align: center;
+}
+.edit_order_left_side {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 50vh;
+    height: calc(90vh - 60px);
+    z-index: 104;
+    background-color: white;
+    overflow-y:scroll;
+}
+
+.edit_order_right_side {
+    position: absolute;
+    top: 60px;
+    left: 50vh;
+    width: calc(90vw - 50vh);
+    height: calc(90vh - 60px);
+    z-index: 104;
+    background-color: white;
+    overflow-y:scroll;
+}
+
+.edit_order_left_side_box{
+    left: 0;
+    top:0;
+    width: calc(100% - 15px);
+    height: auto;
+    text-align: left;
+}
+
+.edit_order_right_side_box{
+    left: 0;
+    top:0;
+    width: calc(100% - 15px);
+    height: auto;
+}
+
+.edit_order_btn_order_exec{
+    width: 100%;
+}
+.edit_order_btn_order_cancel{
+    width: 100%;
+}
+.edit_order_btn_order_return{
+    width: 100%;
+}
+
+dt{
+    font-weight: bold;
+}
+dl{
+    border: black 1px solid;
+    margin-top: 0;
+}
+
+.content_grid_sub_tab_o {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+    width: 100%;
+    border: black 1px solid;
+}
+.content_grid_sub_tab_o:hover{
+    background-color: lightgray ;
+    transition: background-color 500ms linear;
+}
+
+.content_grid_item_1_order {
+    width: 40%;
+    justify-content: left;
+    text-decoration: none;
+    text-align: left;
+    margin: auto;
+}
+.content_grid_item_2_order {
+    width: 15%;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+}

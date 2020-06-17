@@ -1,0 +1,49 @@
+@layout('master')
+
+@section('styles')
+<link rel="stylesheet" href="../css/master.css">
+<link rel="stylesheet" href="../css/content.css">
+@if(user_id == 0)
+<link rel="stylesheet" href="../css/register_window.css">
+@endif
+@endsection
+
+@section('scripts')
+@endsection
+
+@section('privat_info')
+@if(user.id > 0)
+<div class=flex_element_div> <a class=admin_href>{{user.user_login}}</a></div>
+<div class=flex_element_div> <a class=admin_href href=javascript:logOut();>Выйти</a></div>
+@each(can_do in user_can_do)
+@if(can_do == 'prise')
+<div class=flex_element_div><a class=admin_href href=/content?page=1&cat_id=0&ContentType=Categories&filter=>Контент</a></div>
+@endif
+@if(can_do == 'order')
+<div class=flex_element_div><a class=admin_href href=/orders?page=1&filter=>Заказы</a></div>
+@endif
+@if(can_do == 'user')
+<div class=flex_element_div><a class=admin_href href=/users?page=1&filter=>Пользователи</a></div>
+@endif
+@endeach
+@else
+<input class=login_input id=login_input name=login_input type=text placeholder=login>
+<b>   </b>
+<input class=\pass_input id=pass_input name=pass_input type=password placeholder=password>
+<b>   </b>
+<input class=login_button type=button value=Login onclick=Login()>
+<b>   </b>
+<a class=admin_href href=javascript:ShowRegisterWindow()>Регистрация</a>
+@endif
+@endsection
+
+@section('content')
+@endsection
+
+@section('modals')
+<div class="modal_container" id="modal_container"> </div>
+@endsection
+
+@section('script_after')
+  <script>UpdateShoppingPage({{filter}})</script>
+@endsection

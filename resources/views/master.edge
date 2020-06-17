@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Infant:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+
+  @!section('styles')
+
+  <title>eShop</title>
+
+  <script src="../js/users.js"></script>
+  <script src="../js/shopping.js"></script>
+
+  @!section('scripts')
+
+</head>
+
+<body>
+
+<div class="main_block">
+
+  <div class="head_cont">
+    <div class="header">
+      <div class="header_element_1">
+        <a class="header_logo" href="/">eShop!</a>
+      </div>
+      <div class="header_element_2">
+        <div class="header_contact">
+          <a class="logo_contact_tel" href="tel:+3801234567">tel:+3801234567</a>
+          <br><a class="logo_contact_mail" href="mailto:mail@gmail.com">mail@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="privat_info1">
+      <div class="privat_info_element_1" id="privat_info_element_1">
+        @!section('privat_info')
+      </div>
+      <div class="privat_info_element_2">
+        <div><a href="/shopping?filter=" id="find_login_shopping_count_1"> <img class="find_login_shopping" src="../decor/shopping.png"></a></div>
+        <div><a class=find_login_shopping_count id=find_login_shopping_count href=/shopping?filter=>  0 (0 грн)</a></div>
+      </div>
+    </div>
+
+    <div class="find_panel"  id="find_panel">
+      <div class="find_panel_element_1"><input class="find_panel_input" id="find_panel_input" name="find_panel_input" autocomplete="off" type="text"></div>
+      <div class="find_panel_element_2"><input class="find_panel_button" type="button" value="Найти" onclick="FindClick()"></div>
+    </div>
+  </div>
+
+  <div class="content_grid"  id="content_grid">
+    @!section('content')
+  </div>
+
+  @!section('modals')
+
+  <div class="loader" id="loader"></div>
+
+</div>
+<script>GetShoppingAdminPanel()</script>
+
+@!section('script_after')
+
+</body>
+</html>
